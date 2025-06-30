@@ -3,6 +3,8 @@
 steps:
 - name: gcr.io/cloud-builders/docker
   id: 'android-builder'
+  options:
+  logging: CLOUD_LOGGING_ONLY
   env:
     - 'BUILD=$BUILD_ID'
     - 'PROJECT=$PROJECT_ID'
