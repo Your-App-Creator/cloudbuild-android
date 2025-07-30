@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.description="Android Builder"
 
 # Packages
 RUN yum -y install wget unzip xxd libidn && yum -y upgrade
-RUN microdnf install findutils
+RUN dnf update -y && dnf install -y findutils
 # ADD credentials/google_cloud.repo /etc/yum.repos.d
 # RUN yum -y install deltarpm google-cloud-sdk wget unzip xxd libidn && yum -y upgrade
 
